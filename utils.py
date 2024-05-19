@@ -15,6 +15,10 @@ def altera_pessoas():
     pessoa.idade = 21
     pessoa.save()
 
+def excluir_pessoa():
+    pessoa = Pessoas.query.filter_by(nome='Felipe').first()
+    pessoa.delete()
+
 if __name__ == '__main__':
     #consulta_pessoas()
     #insere_pessoas()
